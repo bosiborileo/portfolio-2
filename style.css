@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+.content {
+    height: 100vh;
+    width: 100vw;
+    position: flex;
+    flex-direction: column;
+}
+
+.nav-bar{
+    height: 100px;
+    width: 100%;
+    position: inherit;
+    background-color:  rgb(68, 12, 29);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.logo{
+    justify-content: center;
+    align-items: center;
+}
+.logo-text {}
+
+.logo-text h3{
+    color: black;
+    position: absolute;
+    left: 5%;
+    top: 15px;
+    transform: translate(30%, 15%);
+    text-transform: uppercase;
+    text-align: center;
+    font-display: sans-serif;
+    letter-spacing: 2px;
+}
+
+.nav-items{
+    display: flex;
+}
+.nav-items ul{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-right: 60px;
+}
+
+.nav-items li{
+    font-family: 'ubuntu', sans-serif;
+
+}
+.nav-items li a{
+    color: black;
+    text-transform: capitalize;
+    margin-left: 10px;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+}
+.nav-items li a:hover{
+    color: white;
+    transition: all .5s ease-in-out;
+}
+.content-section{
+    position: fixed;
+    top: 100px;
+    height: 100vh;
+    width: 215vh;
+    
+}
+/*home content*/
+.home-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    min-width: 100%;
+    background-image: url("/img/Screenshot\ \(149\).png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.home-content .banner{
+    height: 200px;
+    width: 950px;
+    margin: 10%auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content .banner .title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.home-content .banner .title h1{
+    color: black;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 3px;
+    display: block;
+    width: fit-content;
+    position: relative;
+    color: white;
+}
+
+.home-content .banner .title h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease ;
+    animation-delay: 1s;
+
+}
+
+.home-content .banner .title h1 span .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.home-content .banner .title h1 span.cta:hover {
+    color: white;
+    background-color: crimson ;
+}
+
+.home-content .banner .title p {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*keyframe*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+/*end of keyrames*/
+/*end of home section*/
+
+/*about me section*/
+
+.about-content {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(216, 203, 203);
+    align-items: center;
+    min-height: 5px;
+}
+.about-content .col-left{
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.about-content .col-left img{
+    float: left;
+    z-index:1 ;
+    opacity: .7;
+}
+
+.about-content .col-right{
+    float: right;
+    width: 100%;
+}
+
+.about-content .col-right .title{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.about-content .col-right .title h3{
+    color: black;
+    font-size: 2rem;
+    margin-top: 5px;
+    letter-spacing: .1rem;
+    margin-bottom: 5px;
+
+}
+
+.about-content .col-right p{
+    margin-top: 5px;
+    justify-content: center;
+    text-align: center;
+} 
+/*end of about me section*/
+
+/*services section*/
+
+.services-content {
+    background-color:   rgb(216, 203, 203);
+    height: 100%;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+}
+.services-content .banner{
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.services-content .banner .col-right{
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+}
+.services-content .banner .col-right title{
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    display: block;
+}
+.services-content .banner .col-right title h3{
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    justify-content: center;
+    position: absolute;
+}
+.services-content .banner .col-right img{
+    opacity: .7;
+    z-index: 1;
+}
+.services-content .banner .col-right h4{
+    text-decoration: underline;
+    font-size: 17px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 1rem;
+}
+.services-content .banner .col-right p{
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.services-content .banner .col-left{
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.services-content .banner .col-left img{
+    opacity: .7;
+    z-index: 1;
+}
+.services-content .banner .col-left h4{
+    text-decoration: underline;
+    font-size: 17px;
+    align-items: center;
+    font-family: Arial, Georgia, 'Times New Roman', Times, serif;
+    text-indent: 1rem;
+}
+.services-content .banner .col-left p{
+    justify-content: center;
+    position: relative;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/*end of services section*/
+
+/*start of contacts section*/
+.contacts-content {
+    background-color:   rgb(216, 203, 203);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+
+}
+.contacts-content .title{
+    display: flex;
+    flex-direction: column;
+    
+}
+.contacts-content .title h3{
+    color: black;
+    font-size: 40px;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+.contacts-content .contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.contacts-content .contacts .card{
+    height: 170px;
+    width: 230px;
+    margin: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+}
+.contacts-content .contacts .card h4{
+    font-size: 15px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+.contacts-content .contacts .card .details{
+    min-width: 170;
+}
+.contacts-content .contacts .card .details span{
+    color: rgb(83, 13, 13);
+}
+.contacts-content .contacts .card .details img{
+    justify-content: center;
+    align-items: center;
+}
+

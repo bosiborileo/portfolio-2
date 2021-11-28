@@ -1,34 +1,39 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
-    overflow: hidden;
 }
+
 .content {
-    height: 100vh;
+    height: 100px;
     width: 100vw;
     position: flex;
     flex-direction: column;
 }
 
-.nav-bar{
-    height: 100px;
+.nav-bar {
+    height: 100vh;
     width: 100%;
     position: inherit;
-    background-color:  rgb(68, 12, 29);
+    background-color:rgb(32, 31, 31);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
+    margin: 10px;
+    padding: 10px;
     z-index: 9999;
 }
+
 .logo{
     justify-content: center;
     align-items: center;
 }
-.logo-text {}
+.logo-text {
+    cursor: pointer;
+}
 
 .logo-text h3{
-    color: black;
+    color: white;
+    font-size: 30px;
     position: absolute;
     left: 5%;
     top: 15px;
@@ -54,7 +59,7 @@
 
 }
 .nav-items li a{
-    color: black;
+    color: white;
     text-transform: capitalize;
     margin-left: 10px;
     font-size: 20px;
@@ -64,6 +69,7 @@
 .nav-items li a:hover{
     color: white;
     transition: all .5s ease-in-out;
+    box-shadow: 0 0 10px white;
 }
 .content-section{
     position: fixed;
@@ -78,12 +84,13 @@
     top: 0;
     height: 100%;
     min-width: 100%;
-    background-image: url("/img/Screenshot\ \(149\).png");
-    background-color: black;
+    background-image: url("/img/photo_2021-11-27_11-53-06.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    z-index: 1;
+    z-index: -1;
+    opacity: .3;
 }
 
 .home-content .banner{
@@ -93,7 +100,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .home-content .banner .title {
     position: relative;
     display: flex;
@@ -110,7 +116,7 @@
     display: block;
     width: fit-content;
     position: relative;
-    color: white;
+    color: crimson;
 }
 
 .home-content .banner .title h1 span{
@@ -119,7 +125,7 @@
     left: 0;
     height: 100%;
     width: 0%;
-    background-color: crimson;
+    background-color: black;
     animation: text_reveal_box 1s ease ;
     animation-delay: 1s;
 
@@ -128,9 +134,9 @@
 .home-content .banner .title h1 span .cta{
     display: inline-block;
     padding: 10px 30px;
-    color: white;
+    color: rgb(202, 63, 21);
     background-color: transparent;
-    border: 2px solid crimson;
+    border: 2px solid black;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -140,12 +146,12 @@
 }
 
 .home-content .banner .title h1 span.cta:hover {
-    color: white;
-    background-color: crimson ;
+    color:rgb(202, 63, 21);
+    background-color: black ;
 }
 
 .home-content .banner .title p {
-    color: black;
+    background-color: white;
     text-align: center;
     margin-top: 20px;
 }
@@ -173,20 +179,23 @@
     top: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(216, 203, 203);
+    background-color: white;
     align-items: center;
-    min-height: 5px;
+    min-height: 10px;
+    padding: 10px;
+    margin-bottom: 60px ;
+    box-sizing: border-box;
 }
 .about-content .col-left{
-    margin: 5px;
-    padding: 5px;
+    margin: 2px;
+    padding: 2px;
 
 }
 
 .about-content .col-left img{
-    float: left;
-    z-index:1 ;
-    opacity: .7;
+    z-index:-1;
+    width: 300px;
+    height: 400px;
 }
 
 .about-content .col-right{
@@ -201,12 +210,14 @@
     justify-content: center;
 }
 
-.about-content .col-right .title h3{
+.about-content .col-right .title h1{
     color: black;
-    font-size: 2rem;
-    margin-top: 5px;
+    font-size: 40px;
+    text-decoration: underline;
+    margin-top: 2px;
     letter-spacing: .1rem;
-    margin-bottom: 5px;
+    margin-bottom: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -214,13 +225,15 @@
     margin-top: 5px;
     justify-content: center;
     text-align: center;
+    color: black;
+    font-size: 17px;
 } 
 /*end of about me section*/
 
 /*services section*/
 
 .services-content {
-    background-color:   rgb(216, 203, 203);
+    background-color: white ;
     height: 100%;
     width: 100vw;
     align-items: center;
@@ -244,45 +257,46 @@
     justify-content: center;
     text-align: center;
     flex-direction: row;
-    display: block;
 }
-.services-content .banner .col-right title h3{
-    font-size: 50px;
+.services-content .banner .col-right title h1{
     text-align: center;
     text-decoration: underline;
-    text-transform: capitalize;
     justify-content: center;
     position: absolute;
+    font-size: 40px;
 }
 .services-content .banner .col-right img{
-    opacity: .7;
     z-index: 1;
 }
 .services-content .banner .col-right h4{
     text-decoration: underline;
-    font-size: 17px;
+    font-size: 20px;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 1rem;
+    color: black;
 }
-.services-content .banner .col-right p{
+
+.services-content .banner .col-right p {
     justify-content: center;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
 }
-.services-content .banner .col-left{
+
+.services-content .banner .col-left {
     text-align: center;
     justify-content: center;
     flex-direction: column;
 }
 .services-content .banner .col-left img{
-    opacity: .7;
     z-index: 1;
 }
 .services-content .banner .col-left h4{
     text-decoration: underline;
-    font-size: 17px;
+    font-size: 20px;
+    color: black;
     align-items: center;
     font-family: Arial, Georgia, 'Times New Roman', Times, serif;
     text-indent: 1rem;
@@ -290,7 +304,7 @@
 .services-content .banner .col-left p{
     justify-content: center;
     position: relative;
-    font-size: 15px;
+    font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
@@ -299,15 +313,15 @@
 
 /*start of contacts section*/
 .contacts-content {
-    background-color:   rgb(216, 203, 203);
-    position: relative;
+    background-color: rgba(12, 12, 12, 0.9);
     display: flex;
-    flex-direction: row;
+    flex-direction: column ;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100vh;
     top: 0;
-    height: 100%;
-    width: 100vw;
+    box-sizing: border-box;
 
 }
 .contacts-content .title{
@@ -315,40 +329,43 @@
     flex-direction: column;
     
 }
-.contacts-content .title h3{
-    color: black;
+.contacts-content .title h2{
+    color: white;
     font-size: 40px;
-    margin-top: 5px;
+    margin-top: 10px;
     text-decoration: underline;
+    opacity: .6;
 }
-.contacts-content .contacts{
+.form{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-.contacts-content .contacts .card{
-    height: 170px;
-    width: 230px;
-    margin: 10px 10px;
-    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
     align-items: center;
-    color: black;
+    margin: 20px 0px;
+}
+.input{
+    margin: 6px;
+    padding: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+#msg{
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 10px;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
 
 }
-.contacts-content .contacts .card h4{
-    font-size: 15px;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-.contacts-content .contacts .card .details{
-    min-width: 170;
-}
-.contacts-content .contacts .card .details span{
-    color: rgb(83, 13, 13);
-}
-.contacts-content .contacts .card .details img{
-    justify-content: center;
-    align-items: center;
-}
-
